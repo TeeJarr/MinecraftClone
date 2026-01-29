@@ -14,7 +14,8 @@ class Renderer {
         return camera;
     }
 
-     static void drawBlock(const Block& block);
+    static void drawBlock(const Block& block, const Vector3& playerPosition);
+    static bool isBlockVisible(const Vector3& blockPosition, const Vector3& playerPosition);
 };
 
 

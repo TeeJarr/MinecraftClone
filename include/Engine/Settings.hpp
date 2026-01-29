@@ -18,10 +18,15 @@ class Settings {
      int screenHeight;
      int frameRate;
 
+    int renderDistance; // Rendering Chunks
+    int fov;
+
     private:
     Settings() {
         screenWidth = 1280;
         screenHeight = 720;
-        frameRate = 60;
+        this->frameRate = 60;
+        this->fov = 45;
+        this->renderDistance = 5;
     }
 };

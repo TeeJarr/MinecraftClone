@@ -18,6 +18,8 @@ add_executable(${PROJECT_NAME} ${SOURCES}
         include/Engine/Renderer.hpp
         include/Engine/Settings.hpp
         include/World/Block.hpp
+        src/World/Chunk.cpp
+        include/World/Chunk.hpp
 )
 target_link_libraries(${PROJECT_NAME} PUBLIC raylib)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
