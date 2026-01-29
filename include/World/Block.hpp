@@ -9,9 +9,11 @@
 #include <array>
 
 enum BlockIds {
+    Bedrock,
     Air,
     Grass,
     Dirt,
+    Stone,
     Water,
     OakWood,
     OakLeaves
@@ -20,8 +22,56 @@ enum BlockIds {
 struct Block {
     Vector3 position{};
     Vector3 size = {1,1,1};
-    Color color{};
     u_int8_t blockId{};
+    Color color{};
+
+    bool operator!() const {
+        return blockId;
+    }
 };
+
+inline Block BEDROCK_BLOCK{
+    {},
+    {1,1,1},
+    Bedrock,
+    BLACK
+};
+
+inline Block GRASS_BLOCK{
+    {},
+    {1,1,1},
+    Grass,
+    GREEN
+};
+
+inline Block DIRT_BLOCK{
+    {},
+    {1,1,1},
+    Dirt,
+    BROWN
+};
+
+inline Block WATER_BLOCK{
+    {},
+    {1,1,1},
+    Water,
+    BLUE
+};
+
+inline Block STONE_BLOCK{
+    {},
+    {1,1,1},
+    Stone,
+    GRAY
+};
+
+inline Block AIR_BLOCK{
+    {},
+    {1,1,1},
+    Air,
+    WHITE
+};
+
+
 
 #endif //MINECRAFTCLONE_BLOCK_HPP

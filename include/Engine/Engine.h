@@ -8,7 +8,7 @@
 
 #include "Player.hpp"
 #include "Settings.hpp"
-#include "../World/Block.hpp"
+#include "../World/Chunk.hpp"
 #include "Renderer.hpp"
 
 
@@ -33,12 +33,12 @@ private: // Engine Functions
     private: // variables
     Player player = Player();
     Camera3D camera = Renderer::getCamera();
+    Chunk chunk1 = Chunk();
+    Chunk chunk2 = Chunk();
     Settings settings = Settings::getInstance();
-    Block block = {
-        {0,0,0},
-        {1,1,1,},
-        GREEN
-    };
+
+    private: // Debug
+    std::string coords;
 };
 
 

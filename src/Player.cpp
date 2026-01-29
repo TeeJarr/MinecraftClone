@@ -25,7 +25,7 @@ void Player::controlCamera(Camera3D* camera_3d) {
                 (IsKeyDown(KEY_S) || IsKeyDown(KEY_DOWN))*0.1f,
                 (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT))*0.1f -   // Move right-left
                 (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT))*0.1f,
-                0.0f                                                // Move up-down
+                (IsKeyDown(KEY_SPACE)*0.1f - IsKeyDown(KEY_LEFT_SHIFT)*0.2f)                                                // Move up-down
             },
             (Vector3){
                 GetMouseDelta().x*0.05f,                            // Rotation: yaw
@@ -36,5 +36,4 @@ void Player::controlCamera(Camera3D* camera_3d) {
 }
 
 void Player::move() {
-
 }
